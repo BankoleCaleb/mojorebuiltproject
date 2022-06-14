@@ -9,7 +9,7 @@ body {
 }
 
 .main-container {
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -321,4 +321,45 @@ td + td {
 
 .to-position {
     position: relative;
+}
+
+@media (max-width: 800px) {
+    header {
+        display: block;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+
+    .body {
+        display: block;
+    }
+
+    .bigger-content {
+        display: block;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .main-container {
+        width: 100vw;
+    }
+
+    .main-container header {
+        overflow: hidden;
+        width: 100vw;
+    }
+
+    [type = "submit"] {
+        display: none;
+    }
+
+    body {
+        background-color: #555;
+    }
 }
